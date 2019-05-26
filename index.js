@@ -21,10 +21,12 @@ const projectDir = `${cwd}/${projectName}`;
 console.log(chalk.blue("Cloning files..."));
 if (!fs.existsSync(projectDir)){
   fs.mkdirSync(projectDir);
-}
+};
 git()
   .clone(repository, projectDir)
   .then(() => {
-    git(projectDir).removeRemote("origin");
+    if (!fs.existsSync(projectDir)){
+      git(projectDir).removeRemote("origin");
+    }
     console.log(chalk.green("Done!"));
   });
