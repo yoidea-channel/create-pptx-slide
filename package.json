@@ -1,0 +1,18 @@
+{
+  "name": "create-pptx-slide",
+  "version": "1.0.0",
+  "description": "Set up a working directroy for pptx slide by running one command.",
+  "main": "index.js",
+  "repository": "https://github.com/yoidea-channel/create-pptx-slide.git",
+  "author": "@yoidea",
+  "license": "MIT",
+  "private": true,
+  "bin": {
+    "create-pptx-slide": "./index.js"
+  },
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "commander": "^2.20.0",
+    "simple-git": "^1.113.0"
+  }
+}
